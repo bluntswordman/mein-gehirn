@@ -20,8 +20,8 @@ const IndexPage: React.FC<PageProps> = () => {
           <HiOutlineChevronDoubleDown className='w-8 h-8' />
         </button>
       </div>
-      <div className='w-full min-h-screen bg-gradient-to-r'>
-        <h1>wkwwkk</h1>
+      <div className='w-full min-h-screen bg-gradient-to-r container mx-auto px-2'>
+        
       </div>
       <div className='w-full min-h-screen bg-gradient-to-r'>
 
