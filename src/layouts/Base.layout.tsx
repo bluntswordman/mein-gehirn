@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { FaGithubSquare, FaInstagramSquare, FaLinkedin } from 'react-icons/fa'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import { Link } from 'gatsby'
 
 interface BaseLayoutProps {
   children?: React.ReactNode
@@ -21,7 +22,7 @@ const BaseLayout: React.FC<BaseLayoutProps> = ({ children, className }) => {
     <>
       <header className={`fixed flex flex-row items-center justify-between w-full px-4 bg-white shadow-md md:px-10 transform duration-500 z-[1] ${scrollPosition > 185 ? 'h-10' : 'h-16'}`}>
         <h1 className='flex flex-row items-center'>
-          <a href='/' className={`font-bold text-catalina-blue-900 transform duration-500 ${scrollPosition > 185 ? 'text-lg ' : 'text-2xl'}`}>brln.by</a>
+          <Link to='/' className={`font-bold text-catalina-blue-900 transform duration-500 ${scrollPosition > 185 ? 'text-lg ' : 'text-2xl'}`}>brln.by</Link>
         </h1>
         <nav className='flex flex-row'>
           <button className='block md:hidden text-catalina-blue-900' onClick={() => setIsMenuOpen(!isMenuOpen)}>
