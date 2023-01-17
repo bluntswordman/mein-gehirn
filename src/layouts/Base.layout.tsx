@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import { Link } from 'gatsby'
+import React, { useEffect, useState } from 'react'
 import { FaGithubSquare, FaInstagramSquare, FaLinkedin } from 'react-icons/fa'
 import { GiHamburgerMenu } from 'react-icons/gi'
-import { Link } from 'gatsby'
 
 interface BaseLayoutProps {
   children?: React.ReactNode

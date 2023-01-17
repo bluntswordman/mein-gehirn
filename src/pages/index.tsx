@@ -20,14 +20,11 @@ const IndexPage: React.FC<PageProps> = () => {
           <HiOutlineChevronDoubleDown className='w-8 h-8' />
         </button>
       </div>
-      <div className='w-full min-h-screen bg-gradient-to-r container mx-auto px-2'>
-        
+      <div className='container w-full min-h-screen px-2 mx-auto bg-gradient-to-r'>
       </div>
       <div className='w-full min-h-screen bg-gradient-to-r'>
-
       </div>
       <div className='flex items-center justify-center w-full min-h-screen'>
-
       </div>
     </BaseLayout>
   )
