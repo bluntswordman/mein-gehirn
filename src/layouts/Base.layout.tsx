@@ -14,32 +14,99 @@ const BaseLayout: React.FC<BaseLayoutProps> = ({ children, className }) => {
 
   useEffect(() => {
     const onScroll = () => setScrollPosition(window.pageYOffset)
-    window.addEventListener("scroll", onScroll)
-    return () => window.removeEventListener("scroll", onScroll)
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   return (
     <>
-      <header className={`fixed flex flex-row items-center justify-between w-full px-4 bg-white shadow-md md:px-10 transform duration-500 z-[1] ${scrollPosition > 185 ? 'h-10' : 'h-16'}`}>
+      <header
+        className={`fixed flex flex-row items-center justify-between w-full px-4 bg-white shadow-md md:px-10 transform duration-500 z-[1] ${
+          scrollPosition > 185 ? 'h-10' : 'h-16'
+        }`}
+      >
         <h1 className='flex flex-row items-center'>
-          <Link to='/' className={`font-bold text-catalina-blue-900 transform duration-500 ${scrollPosition > 185 ? 'text-lg ' : 'text-2xl'}`}>brln.by</Link>
+          <Link
+            to='/'
+            className={`font-bold text-catalina-blue-900 transform duration-500 ${
+              scrollPosition > 185 ? 'text-lg ' : 'text-2xl'
+            }`}
+          >
+            brln.by
+          </Link>
         </h1>
         <nav className='flex flex-row'>
-          <button className='block md:hidden text-catalina-blue-900' onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <GiHamburgerMenu className={`transform duration-500 ${scrollPosition > 185 ? 'w-4 h-4' : 'w-6 h-6'}`} />
+          <button
+            className='block md:hidden text-catalina-blue-900'
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <GiHamburgerMenu
+              className={`transform duration-500 ${
+                scrollPosition > 185 ? 'w-4 h-4' : 'w-6 h-6'
+              }`}
+            />
           </button>
-          <div className={`fixed left-0 right-0 min-h-screen bg-white md:bg-transparent flex flex-col py-20 items-center space-y-3 transform duration-500 md:static md:flex-row md:translate-x-0 md:min-h-0 md:top-0 md:space-x-2 md:space-y-0 capitalize font-semibold ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} ${scrollPosition > 185 ? 'top-12' : 'top-[74px]'}`}>
-            <a href="https://github.com/bluntswordman" target="_blank" rel="noreferrer" className='flex flex-row items-center justify-center space-x-5 duration-300 md:flex-none space-transition-all text-catalina-blue-900 hover:text-catalina-blue-700'>
-              <FaGithubSquare className={`w-8 h-8 md:transform md:duration-500 ${scrollPosition > 185 ? 'md:w-5 md:h-5' : 'md:w-8 md:h-8'}`} />
-              <span className={`md:hidden md:transform md:duration-500 ${scrollPosition > 185 ? 'md:text-sm' : 'md:text-base'}`}>Github</span>
+          <div
+            className={`fixed left-0 right-0 min-h-screen bg-white md:bg-transparent flex flex-col py-20 items-center space-y-3 transform duration-500 md:static md:flex-row md:translate-x-0 md:min-h-0 md:top-0 md:space-x-2 md:space-y-0 capitalize font-semibold ${
+              isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+            } ${scrollPosition > 185 ? 'top-12' : 'top-[74px]'}`}
+          >
+            <a
+              href='https://github.com/bluntswordman'
+              target='_blank'
+              rel='noreferrer'
+              className='flex flex-row items-center justify-center space-x-5 duration-300 md:flex-none space-transition-all text-catalina-blue-900 hover:text-catalina-blue-700'
+            >
+              <FaGithubSquare
+                className={`w-8 h-8 md:transform md:duration-500 ${
+                  scrollPosition > 185 ? 'md:w-5 md:h-5' : 'md:w-8 md:h-8'
+                }`}
+              />
+              <span
+                className={`md:hidden md:transform md:duration-500 ${
+                  scrollPosition > 185 ? 'md:text-sm' : 'md:text-base'
+                }`}
+              >
+                Github
+              </span>
             </a>
-            <a href="https://www.linkedin.com/in/bedy-b-wijaya/" target="_blank" rel="noreferrer" className='flex flex-row items-center justify-center space-x-5 duration-300 space-transition-all text-catalina-blue-900 hover:text-catalina-blue-700 md:flex-none'>
-              <FaLinkedin className={`w-8 h-8 md:transform md:duration-500 ${scrollPosition > 185 ? 'md:w-5 md:h-5' : 'md:w-8 md:h-8'}`} />
-              <span className={`md:hidden md:transform md:duration-500 ${scrollPosition > 185 ? 'md:text-sm' : 'md:text-base'}`}>LinkedIn</span>
+            <a
+              href='https://www.linkedin.com/in/bedy-b-wijaya/'
+              target='_blank'
+              rel='noreferrer'
+              className='flex flex-row items-center justify-center space-x-5 duration-300 space-transition-all text-catalina-blue-900 hover:text-catalina-blue-700 md:flex-none'
+            >
+              <FaLinkedin
+                className={`w-8 h-8 md:transform md:duration-500 ${
+                  scrollPosition > 185 ? 'md:w-5 md:h-5' : 'md:w-8 md:h-8'
+                }`}
+              />
+              <span
+                className={`md:hidden md:transform md:duration-500 ${
+                  scrollPosition > 185 ? 'md:text-sm' : 'md:text-base'
+                }`}
+              >
+                LinkedIn
+              </span>
             </a>
-            <a href="https://www.instagram.com/_brln.by/" target="_blank" rel="noreferrer" className='flex flex-row items-center justify-center space-x-5 duration-300 space-transition-all text-catalina-blue-900 hover:text-catalina-blue-700 md:flex-none'>
-              <FaInstagramSquare className={`w-8 h-8 md:transform md:duration-500 ${scrollPosition > 185 ? 'md:w-5 md:h-5' : 'md:w-8 md:h-8'}`} />
-              <span className={`md:hidden md:transform md:duration-500 ${scrollPosition > 185 ? 'md:text-sm' : 'md:text-base'}`}>Github</span>
+            <a
+              href='https://www.instagram.com/_brln.by/'
+              target='_blank'
+              rel='noreferrer'
+              className='flex flex-row items-center justify-center space-x-5 duration-300 space-transition-all text-catalina-blue-900 hover:text-catalina-blue-700 md:flex-none'
+            >
+              <FaInstagramSquare
+                className={`w-8 h-8 md:transform md:duration-500 ${
+                  scrollPosition > 185 ? 'md:w-5 md:h-5' : 'md:w-8 md:h-8'
+                }`}
+              />
+              <span
+                className={`md:hidden md:transform md:duration-500 ${
+                  scrollPosition > 185 ? 'md:text-sm' : 'md:text-base'
+                }`}
+              >
+                Github
+              </span>
             </a>
           </div>
         </nav>

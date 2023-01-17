@@ -1,0 +1,19 @@
+{
+	"semi": false,
+  "jsxSingleQuote": true,
+	"overrides": [
+    {
+      "files": "*.{ts,tsx}",
+      "options": {
+        "parser": "typescript"
+      }
+    },
+    {
+      "files": "*.{js,jsx,ts,tsx}",
+      "options": {
+        "singleQuote": true,
+        "trailingComma": "es5"
+      }
+    }
+  ]
+}
