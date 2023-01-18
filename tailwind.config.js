@@ -1,63 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './src/pages/**/*.{js,jsx,ts,tsx}',
-    './src/components/**/*.{js,jsx,ts,tsx}',
-    './src/layouts/**/*.{js,jsx,ts,tsx}',
-  ],
-  theme: {
-    extend: {
-      colors: {
-        'yellow-sea': {
-          50: '#FbF9F4',
-          100: '#fbdb8c',
-          200: '#fbd370',
-          300: '#face60',
-          400: '#faca51',
-          500: '#fac542',
-          600: '#fac032',
-          700: '#f9b712',
-          800: '#fabb22',
-          900: '#FAB304',
-        },
-        'catalina-blue': {
-          50: '#F0F8FF',
-          100: '#8ca1ba',
-          200: '#708bab',
-          300: '#607fa1',
-          400: '#517298',
-          500: '#4c6e95',
-          600: '#325986',
-          700: '#224c7d',
-          800: '#123f73',
-          900: '#04346B',
-        },
-        finch: {
-          50: '#fdfdfd',
-          100: '#b7baac',
-          200: '#acaf9f',
-          300: '#a2a594',
-          400: '#979b88',
-          500: '#8e927d',
-          600: '#848871',
-          700: '#7a7e65',
-          800: '#6f7559',
-          900: '#5C6243',
-        },
-        pesto: {
-          50: '#fdfdfd',
-          100: '#c1bfa1',
-          200: '#b2af8b',
-          300: '#aaa67f',
-          400: '#a29e72',
-          500: '#9a9666',
-          600: '#918d59',
-          700: '#89844c',
-          800: '#807b3f',
-          900: '#797434',
-        },
-      },
-    },
-  },
-  plugins: [],
-};
+	darkMode: 'class',
+	content: ['./src/pages/**/*.{js,jsx,ts,tsx}', './src/components/**/*.{js,jsx,ts,tsx}', './src/layouts/**/*.{js,jsx,ts,tsx}'],
+	theme: {
+		extend: {},
+	},
+	plugins: [],
+}
