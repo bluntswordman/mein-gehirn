@@ -1,4 +1,4 @@
-import type { HeadFC, PageProps } from 'gatsby'
+import type {HeadFC, PageProps} from 'gatsby'
 import MainLayout from 'layouts/MainLayout'
 import React from 'react'
 
@@ -15,11 +15,11 @@ const IndexPage: React.FC<PageProps> = () => {
 				</p>
 				<button
 					className='text-neutral-50 text-base font-semibold px-8 py-2 border-2 border-amber-500 bg-slate-900 rounded-md transition-all duration-300 hover:border-amber-700 flex flex-row space-x-2 justify-center items-center'
-          onClick={() => {
-            window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
-          }}
+					onClick={() => {
+						window.scrollTo({top: window.innerHeight, behavior: 'smooth'})
+					}}
 				>
-          Read More
+					Read More
 				</button>
 			</div>
 			<div className='w-full h-screen'>
