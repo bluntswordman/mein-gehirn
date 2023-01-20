@@ -15,7 +15,8 @@
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
     "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,md,mdx}\"",
-    "format:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx,md,mdx}\""
+    "format:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx,md,mdx}\"",
+    "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\""
   },
   "husky": {
     "hooks": {
@@ -23,9 +24,9 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "prettier --write --ignore-unknown",
-      "git add"
+    "**/*.{js,jsx,json}": [
+      "eslint . --fix",
+      "prettier --write \"src/**/*.{js,jsx,ts,tsx,md,mdx}\""
     ]
   },
   "dependencies": {
@@ -37,6 +38,7 @@
     "gatsby-plugin-image": "^3.4.0",
     "gatsby-plugin-manifest": "^5.4.0",
     "gatsby-plugin-mdx": "^5.3.1",
+    "gatsby-plugin-nprogress": "^5.4.0",
     "gatsby-plugin-sharp": "^5.4.0",
     "gatsby-plugin-sitemap": "^6.4.0",
     "gatsby-source-filesystem": "^5.3.1",
@@ -45,7 +47,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "three": "^0.148.0"
   },
   "devDependencies": {
     "@types/aos": "^3.0.4",
@@ -53,7 +56,13 @@
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
     "@types/styled-components": "^5.1.26",
+    "@types/three": "^0.148.0",
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
     "autoprefixer": "^10.4.13",
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.32.1",
     "gatsby-plugin-postcss": "^6.4.0",
     "gatsby-plugin-root-import": "^2.0.9",
     "husky": "^8.0.3",
