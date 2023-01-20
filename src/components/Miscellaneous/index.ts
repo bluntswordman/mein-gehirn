@@ -1,1 +1,1 @@
-export {default as Cirle} from './code/Circle'
+export { default as Cirle } from './code/Circle';
