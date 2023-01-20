@@ -1,4 +1,4 @@
-import type {HeadFC, PageProps} from 'gatsby';
+import type { HeadFC, PageProps } from 'gatsby';
 import MainLayout from 'layouts/MainLayout';
 import React from 'react';
 import profile from 'assets/img/profile.webp';
@@ -39,7 +39,7 @@ const IndexPage: React.FC<PageProps> = () => {
         </p>
         <button
           onClick={() => {
-            window.scrollTo({top: window.innerHeight, behavior: 'smooth'});
+            window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
           }}
           data-aos="fade-down"
           data-aos-duration="1100"
@@ -77,7 +77,8 @@ const IndexPage: React.FC<PageProps> = () => {
               <a
                 target="_blank"
                 href="http://www.uigm.ac.id/"
-                className="font-semibold text-amber-500 hover:text-amber-700 transition-all duration-300" rel="noreferrer"
+                className="font-semibold text-amber-500 hover:text-amber-700 transition-all duration-300"
+                rel="noreferrer"
               >
                 University of Indo Global Mandiri
               </a>
@@ -85,7 +86,8 @@ const IndexPage: React.FC<PageProps> = () => {
               <a
                 target="_blank"
                 href="http://if.uigm.ac.id/"
-                className="font-semibold text-amber-500 hover:text-amber-700 transition-all duration-300" rel="noreferrer"
+                className="font-semibold text-amber-500 hover:text-amber-700 transition-all duration-300"
+                rel="noreferrer"
               >
                 Informatics Engineering
               </a>
