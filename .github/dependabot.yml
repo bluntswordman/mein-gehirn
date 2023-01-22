@@ -4,11 +4,27 @@
 # https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 
 version: 2
+version: 2
 updates:
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "weekly"
-      time: "02:00"
-      timezone: "Asia/Jakarta"
+      interval: 'monthly'
+      time: '02:00'
+      timezone: 'Asia/Jakarta'
     open-pull-requests-limit: 10
+    reviewers:
+      - '_brln.by'
+      - 'mieser_Kämpfer'
+    labels:
+      - 'dependencies'
+      - 'automerge'
+    versioning-strategy: increase
+    rebase-strategy: disabled
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'monthly'
+      time: '02:00'
+      timezone: 'Asia/Jakarta'
+
