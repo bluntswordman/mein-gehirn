@@ -1,7 +1,7 @@
-import type { HeadFC, PageProps } from 'gatsby';
-import MainLayout from 'layouts/MainLayout';
-import React from 'react';
-import profile from 'assets/img/profile.webp';
+import type { HeadFC, PageProps } from 'gatsby'
+import MainLayout from 'layouts/MainLayout'
+import React from 'react'
+import profile from 'assets/img/profile.webp'
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -39,7 +39,7 @@ const IndexPage: React.FC<PageProps> = () => {
         </p>
         <button
           onClick={() => {
-            window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+            window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
           }}
           data-aos="fade-down"
           data-aos-duration="1100"
@@ -52,26 +52,26 @@ const IndexPage: React.FC<PageProps> = () => {
         <div
           data-aos="fade-down"
           data-aos-duration="700"
-          className="flex flex-row items-center justify-start space-x-5 w-full"
+          className="flex flex-row items-center justify-start space-x-3 sm:space-x-5 w-full min-h-fit"
         >
-          <div className="flex flex-row justify-center items-center space-x-2 text-xl select-none">
+          <div className="flex flex-row min-w-fit lg:justify-center items-center space-x-2 text-xl select-none">
             <span className="font-bold text-amber-500">01.</span>
             <h2 className="font-bold text-neutral-300">About Me</h2>
           </div>
-          <span className="w-1/3 border border-slate-700 mt-2 rounded-full" />
+          <span className="w-full lg:w-1/3 border border-slate-700 mt-2 rounded-full" />
         </div>
-        <div className="grid grid-cols-2 w-full min-h-fit gap-10">
+        <div className="w-full min-h-fit flex flex-col-reverse justify-center items-center sm:grid sm:grid-cols-2 sm:gap-7 lg:gap-10 lg:px-28 sm:content-center sm:justify-items-center">
           <div
             data-aos="fade-down"
             data-aos-duration="700"
-            className="flex flex-col items-center space-y-4"
+            className="flex flex-col items-center space-y-4 py-5 sm:py-0"
           >
-            <p className="text-neutral-400 text-lg select-none">
+            <p className="text-neutral-400 text-lg select-none text-center sm:text-justify">
               {`I'm a Fullstack Web Developer from Palembang, South Sumatra,
               Indonesia. I'm passionate about building web applications that are
               fast, responsive, and accessible.`}
             </p>
-            <p className="text-neutral-400 text-lg select-none">
+            <p className="text-neutral-400 text-lg select-none text-center sm:text-justify">
               {`I'm currently working as a freelance web developer. I'm also a
               student at `}
               <a
@@ -93,7 +93,7 @@ const IndexPage: React.FC<PageProps> = () => {
               </a>
               .
             </p>
-            <p className="text-neutral-400 text-lg select-none">
+            <p className="text-neutral-400 text-lg select-none text-center sm:text-justify">
               {`When I'm not coding, I like to watch anime, read books and listen
               to music.`}
             </p>
@@ -101,21 +101,21 @@ const IndexPage: React.FC<PageProps> = () => {
           <div
             data-aos="fade-down"
             data-aos-duration="700"
-            className="flex flex-col items-start pl-10"
+            className="flex flex-col items-center justify-start sm:items-start sm:pl-10 sm:justify-center"
           >
             <img
               src={profile}
-              alt="profile"
-              className="w-[40%] rounded-lg ring-4 transition-all duration-500 ring-neutral-300 hover:ring-amber-500 ring-offset-4 ring-offset-slate-50"
+              alt="foto-profil"
+              className="w-[50%] sm:w-[70%] lg:w-[40%] rounded-lg ring-4 transition-all duration-500 ring-neutral-300 hover:ring-amber-500 ring-offset-4 ring-offset-slate-50"
             />
           </div>
         </div>
       </div>
       <div className="w-full h-screen"></div>
     </MainLayout>
-  );
-};
+  )
+}
 
-export default IndexPage;
+export default IndexPage
 
-export const Head: HeadFC = () => <title>Bedy B Wijaya</title>;
+export const Head: HeadFC = () => <title>Bedy B Wijaya</title>
