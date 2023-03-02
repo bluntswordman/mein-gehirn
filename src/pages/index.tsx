@@ -1,19 +1,19 @@
-import type { HeadFC, PageProps } from 'gatsby'
-import MainLayout from 'layouts/MainLayout'
-import React from 'react'
-import profile from 'assets/img/profile.webp'
+import type { HeadFC, PageProps } from 'gatsby';
+import MainLayout from 'layouts/MainLayout';
+import React from 'react';
+import profile from 'assets/img/profile.webp';
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <MainLayout>
       <div className="w-full h-screen flex flex-col space-y-4 items-start justify-start py-14">
-        <h3
+        <span
           data-aos="fade-down"
           data-aos-duration="700"
           className="text-amber-500 text-lg select-none"
         >
           Hi there! My name is
-        </h3>
+        </span>
         <h1
           data-aos="fade-down"
           data-aos-duration="800"
@@ -39,7 +39,7 @@ const IndexPage: React.FC<PageProps> = () => {
         </p>
         <button
           onClick={() => {
-            window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
+            window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
           }}
           data-aos="fade-down"
           data-aos-duration="1100"
@@ -113,9 +113,9 @@ const IndexPage: React.FC<PageProps> = () => {
       </div>
       <div className="w-full h-screen"></div>
     </MainLayout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
-export const Head: HeadFC = () => <title>Bedy B Wijaya</title>
+export const Head: HeadFC = () => <title>Bedy B Wijaya</title>;
